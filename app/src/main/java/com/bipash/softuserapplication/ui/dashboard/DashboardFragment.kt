@@ -58,6 +58,7 @@ class DashboardFragment : Fragment() {
         })
 
         btnSubmit.setOnClickListener{
+
             var studentDetails = StudentDetails(gender, etFullName.toString(), etAge.toString(), etAddress.toString())
             val intent = Intent()
             intent.putExtra("details", studentDetails)

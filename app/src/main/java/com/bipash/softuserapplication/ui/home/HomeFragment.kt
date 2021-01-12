@@ -30,7 +30,7 @@ class HomeFragment : Fragment() {
 
         val recyclerView : RecyclerView = root.findViewById(R.id.recyclerView)
         loadStudent()
-        val adapter = studentDetailsAdapter(studentlist,this@MainActivity)
+        val adapter = context?.let { studentDetailsAdapter(it) }
 
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = adapter

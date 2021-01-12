@@ -8,12 +8,14 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bipash.softuserapplication.Database
 import com.bipash.softuserapplication.R
 import com.bipash.softuserapplication.model.StudentDetails
 
+private var database = Database()
+private var studentList = arrayListOf<StudentDetails>()
 class studentDetailsAdapter (
-    val context : Context,
-    val studentlist : ArrayList<StudentDetails>
+    val context : Context
     ) : RecyclerView.Adapter<studentDetailsAdapter.StudentViewHolder>(){
     class StudentViewHolder(view:View):RecyclerView.ViewHolder(view) {
         val imgProfile : ImageView
@@ -41,7 +43,7 @@ class studentDetailsAdapter (
     }
 
     override fun onBindViewHolder(holder: studentDetailsAdapter.StudentViewHolder, position: Int) {
-        val student = studentlist[position]
+        val student = studentList[position]
         holder.tvName.text = student.fullName
         holder.tvAge.text = student.age
         holder.tvGender.text = student.gender
@@ -49,7 +51,7 @@ class studentDetailsAdapter (
     }
 
     override fun getItemCount(): Int {
-        return studentlist.size
+        return studentList.size
     }
 
 }
