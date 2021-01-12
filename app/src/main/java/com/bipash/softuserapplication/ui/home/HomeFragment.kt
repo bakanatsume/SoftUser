@@ -12,12 +12,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bipash.softuserapplication.R
+import com.bipash.softuserapplication.adapter.studentDetailsAdapter
 import com.bipash.softuserapplication.model.StudentDetails
 
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
-    var studentList = ArrayList<StudentDetails>()
+    var studentlist = ArrayList<StudentDetails>()
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -28,14 +29,15 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 
         val recyclerView : RecyclerView = root.findViewById(R.id.recyclerView)
+        loadStudent()
+        val adapter = studentDetailsAdapter(studentlist,this@MainActivity)
 
         recyclerView.layoutManager = LinearLayoutManager(context)
-
-
-//        val textView: TextView = root.findViewById(R.id.text_home)
-//        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//        })
+        recyclerView.adapter = adapter
         return root
+    }
+
+    private fun loadStudent() {
+        studentlist.add(StudentDetails("Male","Bipash","23","Sanobharang"))
     }
 }

@@ -17,9 +17,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        etUsername = findViewById(R.id.etUsername)
-        etPassword = findViewById(R.id.etPassword)
-        btnLogin = findViewById(R.id.btnLogin)
+        binding()
 
         btnLogin.setOnClickListener (this)
 
@@ -28,14 +26,13 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             btnLogin.id -> {
-                val username = etUsername.toString()
-                val password = etPassword.toString()
-                if (username == "softwarica" && password == "coventry") {
+                if (etUsername.text.toString() == "softwarica" && etPassword.text.toString() == "coventry") {
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
+                    Toast.makeText(this, "correctUsername", Toast.LENGTH_SHORT).show()
 
                 } else {
-                    Toast.makeText(this, "invalid username", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "invalid username/password", Toast.LENGTH_SHORT).show()
                     clean()
                 }
             }
@@ -46,5 +43,11 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         etUsername.setText(" ")
         etPassword.setText(" ")
         etUsername.requestFocus()
+    }
+    private fun binding(){
+        etUsername = findViewById(R.id.etUsername)
+        etPassword = findViewById(R.id.etPassword)
+        btnLogin = findViewById(R.id.btnLogin)
+
     }
 }

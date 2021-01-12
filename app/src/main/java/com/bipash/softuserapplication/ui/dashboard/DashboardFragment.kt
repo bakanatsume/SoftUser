@@ -64,7 +64,6 @@ class DashboardFragment : Fragment() {
             startActivity(intent)
         }
 
-
         return root
     }
 

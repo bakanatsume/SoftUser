@@ -70,7 +70,7 @@
         android:id="@+id/btnSubmit"
         android:text="Submit"
         android:textColor="@color/white"
-        android:backgroundTint="@color/black"
+        android:background ="@drawable/rounded_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
