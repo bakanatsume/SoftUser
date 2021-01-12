@@ -28,9 +28,10 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 
         val recyclerView : RecyclerView = root.findViewById(R.id.recyclerView)
+
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        var student =
+
 //        val textView: TextView = root.findViewById(R.id.text_home)
 //        homeViewModel.text.observe(viewLifecycleOwner, Observer {
 //            textView.text = it

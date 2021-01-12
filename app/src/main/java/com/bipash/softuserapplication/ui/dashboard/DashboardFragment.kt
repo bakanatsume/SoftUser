@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.bipash.softuserapplication.MainActivity
 import com.bipash.softuserapplication.R
 import com.bipash.softuserapplication.model.StudentDetails
 
@@ -60,6 +61,7 @@ class DashboardFragment : Fragment() {
             var studentDetails = StudentDetails(gender, etFullName.toString(), etAge.toString(), etAddress.toString())
             val intent = Intent()
             intent.putExtra("details", studentDetails)
+            startActivity(intent)
         }
 
 

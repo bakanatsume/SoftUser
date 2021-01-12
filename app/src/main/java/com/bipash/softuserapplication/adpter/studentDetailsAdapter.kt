@@ -14,6 +14,7 @@ class studentDetailsAdapter (
     val context : Context,
     val studentlist : ArrayList<StudentDetails>
     ) : RecyclerView.Adapter<studentDetailsAdapter.StudentViewHolder>(){
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudentViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.student_layout, parent, false)
         return StudentViewHolder(view)
@@ -25,6 +26,7 @@ class studentDetailsAdapter (
         holder.tvAddress.text = student.address
         holder.tvAge.text = student.age
         holder.tvGender.text = student.gender
+
     }
 
     override fun getItemCount(): Int {
