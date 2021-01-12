@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textSize="30dp"
+        android:layout_marginLeft="20dp"
+        tools:text = "Ramesh"/>
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvName"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textSize="20dp"
+        tools:text="20" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvName"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="51dp"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textSize="20dp"
+        tools:text="lazimpat" />
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvName"
+        android:layout_marginLeft="243dp"
+        android:layout_marginTop="46dp"
+        android:layout_toRightOf="@id/imgProfile"
+        android:textSize="20dp"
+        tools:text="Male" />
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/delete"
+        android:layout_toRightOf="@id/tvName"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>
