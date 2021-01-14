@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:hint="Age"
+        android:inputType="number"
         tools:layout_editor_absoluteX="9dp"
         tools:layout_editor_absoluteY="101dp" />
     <RadioGroup
