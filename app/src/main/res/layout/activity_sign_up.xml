@@ -6,53 +6,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="40dp"
     android:gravity="center"
-    tools:context=".LoginActivity">
+    android:padding="10dp"
+    tools:context=".SignUpActivity">
 
-    <ImageView
-        android:id="@+id/imgLogo"
+    <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/softwaricalogo"
+        android:text="SignUp"
+        android:textSize="50sp"
+        android:textColor="#9932CC"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:layout_marginTop="100dp"
+        android:id="@+id/etFirst"
+        android:hint="First Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         />
-
-
+    <EditText
+        android:id="@+id/etLast"
+        android:hint="LastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
     <EditText
         android:id="@+id/etUsername"
         android:hint="Username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         />
     <EditText
         android:id="@+id/etPassword"
         android:hint="Password"
-        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         />
-    <Button
-        android:id="@+id/btnLogin"
-        android:text="LOGIN"
-        android:textColor="@color/white"
+    <EditText
+        android:id="@+id/etConfirm"
+        android:hint="Confirm Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
+        android:gravity="center"
         />
-
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Don't Have a Account?"/>
-
     <Button
-        android:id="@+id/btnSignUp"
+        android:layout_marginTop="100dp"
+        android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SignUp"
-        android:backgroundTint="#FF0000"
+        android:text="Register"
+        android:backgroundTint="#9932CC"
         />
-
 
 </LinearLayout>
